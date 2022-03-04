@@ -2,9 +2,9 @@ class Solution {
 public:
     
     vector<vector<int>>ans;
-   vector<vector<int>>arr;
+  
    
-    void dfs(int node,vector<int>v,int n,vector<bool>vis){
+    void dfs(int node,vector<int>v,int n,vector<bool>vis,vector<vector<int>>& arr){
         
       vis[node]=true;
         v.push_back(node);
@@ -18,7 +18,7 @@ public:
         for(auto child:arr[node]){
             
             if(!vis[child])
-                dfs(child,v,n,vis);
+                dfs(child,v,n,vis,arr);
         }
         
         vis[node]=false;
@@ -32,8 +32,8 @@ public:
         vector<bool>vis(n,false);
        
         vector<int>v;
-        arr=graph;
-        dfs(0,v,n,vis);
+        // arr=graph;
+        dfs(0,v,n,vis,graph);
         
         return ans;
         
