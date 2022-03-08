@@ -66,7 +66,6 @@ class Solution{
         }
         else{
             a->next=newNode;
-            // cout<<"  tmp data  "<<tmp->data<<endl;
             newNode->next=tmp;
         }
         // cout<<endl<<"Before returning ";
