@@ -40,23 +40,18 @@ vector<int> Smallestonleft(int arr[], int n)
 {
        vector<int>ans; 
        set<int>st;
-    //   st.push_back(-1);
-    //   ans.push_back(-1);
-       
-       for(int i=0;i<n;i++){
+      st.insert(-1);
+      ans.push_back(-1);
+       st.insert(arr[0]);
+       for(int i=1;i<n;i++){
            
            
            st.insert(arr[i]);
            auto it=st.lower_bound(arr[i]);
            
-           if(it==st.begin()){
-               ans.push_back(-1);
-              
-           }
-           else{
                --it;
                ans.push_back(*it);
-           }
+           
        }
             return ans;
 }
