@@ -28,7 +28,7 @@ public:
         }
    
         while(left<right){
-            mid=(left+right)/2;
+            mid=left+(right-left)/2;
             cout<<mid<<" "<<endl;
             if(canSplit(mid,nums,m)){
                 right=mid;
