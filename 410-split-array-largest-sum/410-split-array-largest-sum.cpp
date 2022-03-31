@@ -14,13 +14,12 @@ public:
             if(cnt>m)
                     return false;
         }
-        // cout<<"returning from can split function"<<cnt<<endl;
         return true;
     }
     int splitArray(vector<int>& nums, int m) {
      
         int n=nums.size();
-        int left=INT_MIN,right,mid;
+        int left=INT_MIN,right=0,mid;
         for(int i=0;i<n;i++){
             
             left=max(left,nums[i]);
@@ -28,8 +27,8 @@ public:
         }
    
         while(left<right){
-            mid=left+(right-left)/2;
-            cout<<mid<<" "<<endl;
+            mid=(left+right)/2;
+            cout<<"mid "<<mid<<" "<<endl;
             if(canSplit(mid,nums,m)){
                 right=mid;
             }
