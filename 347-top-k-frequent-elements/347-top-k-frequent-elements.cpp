@@ -11,11 +11,9 @@ public:
             pq.push(make_pair(it->second,it->first));   //pushing pair of <frequency,distinct element of nums array> so that we get most occuring element on top
         }
         vector<int>ans;
-        int a=0;
         while(k--){
             ans.push_back(pq.top().second);
             pq.pop();       //popping k top most elements, inserting in our answer vector and returning the answer.
-            a++;
         }
         return ans;
     }
