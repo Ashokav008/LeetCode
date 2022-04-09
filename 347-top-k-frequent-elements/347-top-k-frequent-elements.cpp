@@ -12,7 +12,7 @@ public:
         }
         vector<int>ans;
         int a=0;
-        while(a<k){
+        while(k--){
             ans.push_back(pq.top().second);
             pq.pop();       //popping k top most elements, inserting in our answer vector and returning the answer.
             a++;
