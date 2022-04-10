@@ -20,8 +20,8 @@ public:
        for(int i=0;i<n;i++){
            if(pq.empty()!=1 and pq.top()<a[i]){
                res+=(a[i]-pq.top());
-               pq.push(a[i]);
                pq.pop();
+              pq.push(a[i]);
            }
            
                pq.push(a[i]);
