@@ -20,9 +20,7 @@ public:
             return "";
      
     
-        pair<int,char>pr={1,'#'};
         string ans;
-        int i=0;
        while(pq.size()>1)
         {
             auto t1=pq.top(); pq.pop();
@@ -40,9 +38,7 @@ public:
             
         }
         if(!pq.empty()){
-            if(pq.top().first>1)
-                return "";
-            else
+            
                 ans+=pq.top().second;
                 
         }
