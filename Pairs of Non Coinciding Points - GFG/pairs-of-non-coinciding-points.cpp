@@ -11,6 +11,10 @@ class Solution {
     int numOfPairs(int x[], int y[], int n) {
         // code here
         
+        //x1==x2 or y1==y2 then the distance will be equal ///Check the formula.
+        
+    
+        
         map<int,int>mp1;
         int cnt1=0;
         for(int i=0;i<n;i++){
@@ -27,6 +31,9 @@ class Solution {
             }
             mp2[y[i]]++;
         }
+        
+        
+        //to minus the pairs whhich are counted double where (x1==x2 and y1==y2)
         
         map<pair<int,int>,int>mp3;
         int cnt3=0;
