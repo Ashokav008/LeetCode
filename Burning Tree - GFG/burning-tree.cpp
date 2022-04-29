@@ -88,10 +88,7 @@ class Solution {
   unordered_map<Node* ,  Node*> mp ;
  
  Node *T=NULL ;
- 
- 
  unordered_map<Node*, bool > visited ;
- 
  void PreOrder(Node *root,int target)
  {
      if(!root)
@@ -160,6 +157,9 @@ class Solution {
            
              t++ ;
          }
+        
+            
+            
         return t-1;
     }
         
