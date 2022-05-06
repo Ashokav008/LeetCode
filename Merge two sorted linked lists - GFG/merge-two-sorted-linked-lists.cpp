@@ -106,9 +106,12 @@ Node* sortedMerge(Node* head1, Node* head2)
         curr=curr->next;
         
     }
+    //connect h1 if remains
     if(h1!=NULL)
             curr->next=h1;
-      if(h2!=NULL)
+           
+      //connect h2 if remains 
+    if(h2!=NULL)
         curr->next=h2;
         
         return myHead->next;;
