@@ -10,7 +10,8 @@ public:
             for(int i=0;i<n;i++){
                left[i]=min(nums[i],mini);
                 mini=min(mini,nums[i]);
-                if(i!=0)
+                
+              if(i!=0)              
                 right[nums[i]]++;
             }
         
@@ -27,13 +28,9 @@ public:
             if(it==right.end())
                 continue;
             
-           
             if(it->first<b)
                     return true;
-            
-            
         }
-        
         return false;
     }
 };
