@@ -28,11 +28,9 @@ public:
                 continue;
             
            
-            if(it->first<b and it->first<b){
-                
-                cout<<i<<"  "<<a<<b<<it->first<<endl;
+            if(it->first<b)
                     return true;
-            }
+            
             
         }
         
