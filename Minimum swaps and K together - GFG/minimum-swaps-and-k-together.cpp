@@ -21,24 +21,18 @@ public:
         }
         int maxValid=0;
         int window=cnt;
-        int valid=0,inValid=0;
+        int valid=0;
         for(int i=0;i<n;i++){
         if(i<window){
                 if(arr[i]<=k)
                     valid++;
-                else
-                    inValid++;
                  maxValid=max(maxValid,valid);
             }
         else{
             if(arr[i]<=k)
                 valid++;
-            else
-                inValid++;
             if(arr[i-window]<=k)
                 valid--;
-            else
-                inValid--;
         maxValid=max(maxValid,valid);
         }
         }
