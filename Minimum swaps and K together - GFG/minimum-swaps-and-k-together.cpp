@@ -14,45 +14,36 @@ class Solution
 {
 public:
     int minSwap(int arr[], int n, int k) {
-        // Complet the function
         int cnt=0;
         for(int i=0;i<n;i++){
             if(arr[i]<=k)
                 cnt++;
         }
         int maxValid=0;
-        int window=cnt;
         int valid=0,inValid=0;
         for(int i=0;i<n;i++){
-        if(i<window){
+        if(i<cnt){
                 if(arr[i]<=k)
                     valid++;
                 else
                     inValid++;
-                    
                  maxValid=max(maxValid,valid);
             }
         else{
-            
             if(arr[i]<=k)
                 valid++;
-            
             else
                 inValid++;
-            
-            if(arr[i-window]<=k)
+            if(arr[i-cnt]<=k)
                 valid--;
-            
             else
                 inValid--;
-                
         maxValid=max(maxValid,valid);
-                
-        }
-                        
+          }
+          
         }
         
-        return window-maxValid;
+        return cnt-maxValid;
     }
 };
 
