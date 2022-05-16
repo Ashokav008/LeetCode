@@ -16,6 +16,7 @@ public:
             
             int sz=q.size();
             while(sz--){
+                
                 pair<int,int> p=q.front();
                 q.pop();
               
