@@ -10,21 +10,23 @@
 
 class Solution {
 public:
- void inOrder(TreeNode* o_root, TreeNode* c_root, TreeNode* target) {
-        if (o_root) {
-            inOrder(o_root->left, c_root->left, target);
-            if (o_root == target) {
-				 ans = c_root;
+    
+    TreeNode* res;
+ void inOrder(TreeNode* org, TreeNode* clone, TreeNode* target) {
+        if (org) {
+            inOrder(org->left, clone->left, target);
+            if (org == target) {
+				 res = clone;
 				 return;
 			}
-            inOrder(o_root->right, c_root->right, target);
+            inOrder(org->right, clone->right, target);
         }
     }
 	
     TreeNode* getTargetCopy(TreeNode* original, TreeNode* cloned, TreeNode* target) {
         inOrder(original, cloned, target);
-        return ans;
+        return res;
     }
-private:
-    TreeNode* ans;
+
+    
 };
