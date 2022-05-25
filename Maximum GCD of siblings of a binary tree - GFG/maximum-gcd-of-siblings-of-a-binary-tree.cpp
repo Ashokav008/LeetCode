@@ -8,10 +8,10 @@ using namespace std;
 
 class Solution {
   public:
-int gcd(int a, int b)
-{
-    return b == 0 ? a : gcd(b, a % b);   
-}
+// int gcd(int a, int b)
+// {
+//     return b == 0 ? a : gcd(b, a % b);   
+// }
   
     int maxBinTreeGCD(vector<vector<int>> arr, int n) {
         // code here4
@@ -21,7 +21,7 @@ int gcd(int a, int b)
             if(arr[i-1][0]==arr[i][0]){
                 int ele1=arr[i-1][1];
                 int ele2=arr[i][1];
-                 g=gcd(ele1,ele2);
+                 g=__gcd(ele1,ele2);
                  ans=max(g,ans);
                  i++;
             }
