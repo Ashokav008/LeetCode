@@ -5,17 +5,17 @@ public:
         return a[1]>b[1];
     }
  
-    int maxEnvelopes(vector<vector<int>>& nums) {
-        int n=nums.size();
-        sort(nums.begin(),nums.end(),comp);
+    int maxEnvelopes(vector<vector<int>>& env) {
+        int n=env.size();
+        sort(env.begin(),env.end(),comp);
 
         vector<int> ans;
-        ans.push_back(nums[0][1]);
+        ans.push_back(env[0][1]);
         for(int i=1;i<n;i++){
-            if(ans.back()<nums[i][1])ans.push_back(nums[i][1]);
+            if(ans.back()<env[i][1])ans.push_back(env[i][1]);
             else {
-                auto it=lower_bound(ans.begin(),ans.end(),nums[i][1]);
-                *it=nums[i][1];
+                auto it=lower_bound(ans.begin(),ans.end(),env[i][1]);
+                *it=env[i][1];
             }
         }
         return ans.size();
