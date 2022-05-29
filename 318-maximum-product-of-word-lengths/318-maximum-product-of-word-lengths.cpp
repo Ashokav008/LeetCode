@@ -12,15 +12,12 @@ public:
           }
        
       }
-    
         for(int i=0;i<n-1;i++){
             for(int j=i+1;j<n;j++){
               bool checked=true;
-                // cout<<str[i]<<"   "<<str[j]<<endl;
                 for(int k=0;k<26;k++){
                 if(  v[i][k]==1 and v[j][k]==1)
                 {
-                    // cout<<"Checked for "<<v[i][k]<<"  "<<v[j][k]<<endl;
                     checked=false;
                     break;
                 }
@@ -31,7 +28,6 @@ public:
                         ans=max(ans,curr);
                     }
             }
-        
         }
         if(ans<0)
                 return 0;
