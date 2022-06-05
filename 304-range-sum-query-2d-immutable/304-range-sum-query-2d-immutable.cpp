@@ -15,11 +15,6 @@ public:
     
     int sumRegion(int row1, int col1, int row2, int col2) {
         int sum=0;
-        // for(int i=0;i<my.size();i++){
-        //     for(int j=0;j<my[0].size();j++){
-        //        cout<<my[i][j]<<"  ";
-        //     }
-        // }
         
         for(int i=row1;i<=row2;i++){
             if(col1==0){
