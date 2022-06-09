@@ -12,7 +12,6 @@ using namespace std;
 class Solution
 {
     public:
-    //Function to merge two nodes a and b.
     int findpar(int node,int parent[],int rank[]){
         if(node==parent[node])
             return node;
@@ -30,8 +29,8 @@ class Solution
         else if(rank1[b]<rank1[a])
             par[b]=a;
         else{
-            par[b]=a;
-            rank1[a]++;
+            par[a]=b;
+            rank1[b]++;
         }
     }
     
