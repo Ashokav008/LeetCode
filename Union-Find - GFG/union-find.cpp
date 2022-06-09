@@ -15,7 +15,7 @@ class Solution
     int findpar(int node,int parent[],int rank[]){
         if(node==parent[node])
             return node;
-        return node=findpar(parent[node],parent,rank);
+        return findpar(parent[node],parent,rank);
     }
     
     void union_( int a, int b, int par[], int rank1[]) 
