@@ -16,10 +16,7 @@ public:
                 start=mp[s[i]]+1;
             
             
-                ans=max(ans,i-start+1);
-            
-           
-            
+            ans=max(ans,i-start+1);
             mp[s[i]]=i;
         }
          if(ans==0)
