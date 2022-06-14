@@ -48,10 +48,6 @@ return left;
         if(nums[0]<nums[n-1])
             return BS(0,n-1,target,nums);
         
-        if(n==1 and nums[0]==target)
-                return 0;
-        if(n==1 and nums[0]!=target)
-                return -1;
         
         int pvt=pivot(nums,n);
         int l=BS(0,pvt,target,nums);
