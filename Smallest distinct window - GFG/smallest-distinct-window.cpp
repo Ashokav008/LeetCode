@@ -29,11 +29,11 @@ class Solution{
                 // cout<<str[j]<<"  "<<endl;
             }
             if(mp.size()==sz){
-                 curr=i-j;
+                 curr=i-j+1;
                 ans=min(ans,curr);
             }
         }
-        return ans+1;
+        return ans;
     }
 };
 
