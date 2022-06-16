@@ -3,21 +3,21 @@ public:
     
     //finctopon for memoization (gives  mle after )
     
-    int lcs(string s1 ,string s2,int x,int y, vector<vector<int>>&dp){
-        if(x==0 or y==0)
-                return 0;
+//     int lcs(string s1 ,string s2,int x,int y, vector<vector<int>>&dp){
+//         if(x==0 or y==0)
+//                 return 0;
         
-        if(dp[x][y]!=-1)
-                return dp[x][y];
+//         if(dp[x][y]!=-1)
+//                 return dp[x][y];
         
-        if(s1[x-1]==s2[y-1])
-            return dp[x][y]=1+lcs(s1,s2,x-1,y-1,dp);
+//         if(s1[x-1]==s2[y-1])
+//             return dp[x][y]=1+lcs(s1,s2,x-1,y-1,dp);
         
-        else
-        {
-            return dp[x][y] = max(lcs(s1,s2,x-1,y,dp),lcs(s1,s2,x,y-1,dp));
-        }
-    }
+//         else
+//         {
+//             return dp[x][y] = max(lcs(s1,s2,x-1,y,dp),lcs(s1,s2,x,y-1,dp));
+//         }
+//     }
     
     int longestPalindromeSubseq(string s) {
         string sr=s;
