@@ -45,8 +45,8 @@ public:
             }
         }
         
-        // return dp[m][m];
-        return lcs(s,sr,m,m,dp);
+        return dp[m][m];
+        // return lcs(s,sr,m,m,dp);
         
     }
 };
