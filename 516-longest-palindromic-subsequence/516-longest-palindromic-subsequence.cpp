@@ -1,6 +1,8 @@
 class Solution {
 public:
     
+    //finctopon for memoization (gives  mle after )
+    
     int lcs(string s1 ,string s2,int x,int y, vector<vector<int>>&dp){
         if(x==0 or y==0)
                 return 0;
@@ -24,6 +26,8 @@ public:
         vector<vector<int>>dp(m+1,vector<int>(m+1,-1));
         // cout<<s<<"   "<<sr<<endl;
         
+        /// dp vala code  (Top down approch )
+        
         for(int i=0;i<m+1;i++){
             for(int j=0;j<m+1;j++){
                 if(i==0 or j==0)
@@ -41,8 +45,8 @@ public:
             }
         }
         
-        return dp[m][m];
-        // return lcs(s,sr,m,m,dp);
+        // return dp[m][m];
+        return lcs(s,sr,m,m,dp);
         
     }
 };
