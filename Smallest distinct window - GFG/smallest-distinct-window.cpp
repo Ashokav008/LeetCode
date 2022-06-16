@@ -9,24 +9,18 @@ class Solution{
     int findSubString(string str)
     {
         // Your code goes here   
-        map<char,int>mp;
-       int n=str.size();
-       int i=0,j=0;
-       int ans=INT_MAX,curr;
-       set<char>st;
+      unordered_map<char,int>mp;
+       int i=0,j=0, n=str.size(),ans=INT_MAX,curr;
+       unordered_set<char>st; // to calculate total no ,of elements..
        for(int i=0;i<n;i++){
            st.insert(str[i]);
        }
        int sz=st.size();
         for(int i=0;i<n;i++){
-            
             mp[str[i]]++;
-            
             while(mp[str[j]]>1){
                 mp[str[j]]--;
                 j++;
-                
-                // cout<<str[j]<<"  "<<endl;
             }
             if(mp.size()==sz){
                  curr=i-j+1;
