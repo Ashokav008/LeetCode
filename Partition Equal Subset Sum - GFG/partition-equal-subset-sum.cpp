@@ -14,11 +14,13 @@ public:
             return 0;
         if(sum==0)
             return 1;
+        if(dp[n][sum]!=-1)
+            return dp[n][sum];
         
         if(arr[n-1]<=sum)
-            return solve(arr,sum-arr[n-1],n-1,dp) or solve(arr,sum,n-1,dp);
+            return dp[n][sum]= solve(arr,sum-arr[n-1],n-1,dp) or solve(arr,sum,n-1,dp);
         else
-            return solve(arr,sum,n-1,dp);
+            return dp[n][sum]= solve(arr,sum,n-1,dp);
     }
 
     int equalPartition(int n, int arr[])
