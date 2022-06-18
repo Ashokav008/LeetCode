@@ -93,30 +93,25 @@ struct Node
 
 class Solution {
   public:
-  int solve(Node* root,int &ans){
-      
-      if(!root)
-            return 0;
-    
-        int lh=solve(root->left,ans);
-        int rh=solve(root->right,ans);
-        
-         ans=max(ans,1+lh+rh);
-        
-        return (1+max(lh,rh));
-      
-  }
+  int ans=0;
   
+  int dfs(Node* root){
+      if(!root)
+        return 0;
+    int lh=dfs(root->left);
+    int rh=dfs(root->right);
+    ans=max(ans,(1+lh+rh));
+    
+    return 1+max(lh,rh);
+    
+  }
     // Function to return the diameter of a Binary Tree.
     int diameter(Node* root) {
         // Your code here
-        if(!root)
-            return 0;
         
-        int ans=INT_MIN;
-        solve(root,ans);
+        ans=0;
+        dfs(root);
         return ans;
-        
     }
 };
 
