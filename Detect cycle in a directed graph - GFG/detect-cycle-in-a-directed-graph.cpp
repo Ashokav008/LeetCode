@@ -7,7 +7,6 @@ class Solution {
   public:
   bool isCyclic(int node,vector<int>adj[],vector<int>&vis){
       vis[node]=1;
-      
       for(auto child : adj[node]){
           if(!vis[child]){
               if(isCyclic(child,adj,vis))
