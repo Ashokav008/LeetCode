@@ -12,17 +12,28 @@ class Solution{
     long long maxSubarraySum(int arr[], int n){
         
         // Your code here
-        int maxi=INT_MIN;
-        int meh=0;
+        
+        int glbl=INT_MIN;
+        int lcl=0;
         for(int i=0;i<n;i++){
-            
-             meh+=arr[i];
-            if(meh<arr[i])
-                meh=arr[i];
-            
-            maxi=max(meh,maxi);
+            lcl+=arr[i];
+            if(lcl<arr[i])
+                lcl=arr[i];
+           
+                glbl=max(glbl,lcl);
         }
-        return maxi;
+        
+        // int maxi=INT_MIN;
+        // int meh=0;
+        // for(int i=0;i<n;i++){
+            
+        //      meh+=arr[i];
+        //     if(meh<arr[i])
+        //         meh=arr[i];
+            
+        //     maxi=max(meh,maxi);
+        // }
+        return glbl;
     }
 };
 
