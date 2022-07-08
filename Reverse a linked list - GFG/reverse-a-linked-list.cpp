@@ -33,11 +33,10 @@ class Solution
 {
     public:
     Node* rec(Node* head){
-        if(head==NULL or head->next==NULL){
+      if(head==NULL or head->next==NULL)
             return head;
-        }
-        Node* rest=rec(head->next);
         
+        Node* rest=rec(head->next);
         head->next->next=head;
         head->next=NULL;
         return rest;
@@ -45,7 +44,7 @@ class Solution
     struct Node* reverseList(struct Node *head)
     {
         Node* curr=head,*prev=NULL,*next=NULL;
-        // return rec(head);
+        return rec(head);
         
     //     while(curr->next!=NULL){
     //         next=curr->next;
