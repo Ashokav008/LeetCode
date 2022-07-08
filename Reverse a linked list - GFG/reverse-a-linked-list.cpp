@@ -47,17 +47,17 @@ class Solution
         Node* curr=head,*prev=NULL,*next=NULL;
         // return rec(head);
         
-        while(curr->next!=NULL){
-            next=curr->next;
-            curr->next=prev;
-            prev=curr;
-            curr=next;
-            next=next->next;
-        }
+    //     while(curr->next!=NULL){
+    //         next=curr->next;
+    //         curr->next=prev;
+    //         prev=curr;
+    //         curr=next;
+    //         next=next->next;
+    //     }
     
-    curr->next=prev;
+    // curr->next=prev;
     
-    return curr;
+    // return curr;
     
         // code here
         // return head of reversed list
