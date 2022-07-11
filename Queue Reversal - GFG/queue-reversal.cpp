@@ -32,16 +32,17 @@ int main()
 //function Template for C++
 
 //Function to reverse the queue.
-void recursive(queue<int>&q){
+void recursive(queue<int> &q){
     
     if(q.size()==1)
-        return;
+        return ;
     int ele=q.front();
     q.pop();
     recursive(q);
     q.push(ele);
-    
+    return;
 }
+
 
 queue<int> rev(queue<int> q)
 {
