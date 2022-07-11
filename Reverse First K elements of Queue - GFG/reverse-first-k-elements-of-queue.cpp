@@ -30,27 +30,27 @@ int main() {
 // User function Template for C++
 
 // Function to reverse first k elements of a queue.
-void recursive(queue<int>&q,int k){
-    if(k==0)
+void rec(queue<int>&q,int k){
+    if(k<=0){
         return;
-
+    }
+    
     int ele=q.front();
     q.pop();
-    recursive(q,k-1);
+    rec(q,k-1);
     q.push(ele);
     
-    return;
 }
 
 queue<int> modifyQueue(queue<int> q, int k) {
     // add code here.
     int n=q.size();
-    recursive(q,k);
-    k=n-k;
-    while(k--){
-        int ele=q.front();
+    n=n-k;
+    rec(q,k);
+    
+    while(n--){
+        q.push(q.front());
         q.pop();
-        q.push(ele);
     }
     
     return q;
