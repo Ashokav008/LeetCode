@@ -52,7 +52,5 @@ output will be 1 2 3 4.</span></pre>
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= N &lt;= 1000<br>
 1 &lt;= K &lt;= N</span></p>
-
-<p><span style="font-size:18px"><strong>Note:&nbsp;</strong>The <strong>Input/Output</strong> format and the&nbsp;<strong>Example</strong> given are used for the system's internal purpose, and should be used by a user for <strong>Expected Output</strong> only. As it is a function problem, hence a user should not read any input from stdin/console. The task is to complete the function specified, and not to write the full code.</span></p>
  <p></p>
             </div>
