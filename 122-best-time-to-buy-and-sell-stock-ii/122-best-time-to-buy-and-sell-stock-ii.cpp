@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxProfit(vector<int>& p) {
-        
+        //plot the graph between p[i] and i..YOu will see the difference...
         
         int ret=0;
         int n=p.size();                            
