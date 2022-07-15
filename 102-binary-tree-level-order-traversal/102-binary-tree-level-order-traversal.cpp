@@ -16,9 +16,9 @@ public:
         vector<vector<int>>v;
           if(root==NULL)
                 return v;
-        vector<int>vv;
-        vv.push_back(root->val);
-        v.push_back(vv);
+        // vector<int>vv;
+        // vv.push_back(root->val);
+        v.push_back({root->val});
         queue<TreeNode*>q;
         q.push(root);
       
