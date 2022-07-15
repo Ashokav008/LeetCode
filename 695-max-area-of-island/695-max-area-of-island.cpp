@@ -3,40 +3,44 @@ public:
     
     int ans=0;
     
+  
+    void dfs(int i,int j,int &d,vector<vector<int>>& grid )
+    {
+        
+        if(i<0 or j<0 or i>=grid.size() or j>=grid[0].size() or grid[i][j]==0)
+                return ;
+        
+            d=d+1;
+        
+            ans=max(ans,d);
+            grid[i][j]=0;
+        
+            dfs(i+1,j,d,grid);
+            dfs(i,j+1,d,grid);
+            dfs(i-1,j,d,grid);
+            dfs(i,j-1,d,grid);
+        
+        
     
-    void dfs(int i,int j,int m,int n, int &area,vector<vector<int>>&grid){
-        
-        if(i<0 or j<0 or i>=n or j>=m or grid[i][j]==0)
-            return;
-   
-         
-        grid[i][j]=0;
-        cout<<i<<" "<<j<<"\n";
-        area=area+1;
-        ans=max(ans,area);
-       
-        dfs(i+1,j,m,n,area,grid);
-        dfs(i,j+1,m,n,area,grid);
-        dfs(i-1,j,m,n,area,grid);
-        dfs(i,j-1,m,n,area,grid);
-        
     }
+    
     int maxAreaOfIsland(vector<vector<int>>& grid) {
+        int n=grid.size(),m=grid[0].size();
         
-        
-        int n=grid.size();
-        int m=grid[0].size();
-        int area;
+        int maxi=INT_MIN;
+        int d=0;
         for(int i=0;i<n;i++){
-            
             for(int j=0;j<m;j++){
+                
                 if(grid[i][j]==1){
-                    area=0;
-                    dfs(i,j,m,n,area,grid);
-                    
+                    d=0;
+                    dfs(i,j,d,grid);
                 }
+                
             }
+            
         }
-        return ans;
+        
+      return ans;  
     }
 };
