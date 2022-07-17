@@ -6,7 +6,7 @@ public:
         int profit=0;
         int maxProfit=0;
         
-        for(int i=0;i<n;i++){
+        for(int i=1;i<n;i++){
             profit=prices[i]-buy;
             maxProfit=max(profit,maxProfit);
             if(buy>prices[i])
