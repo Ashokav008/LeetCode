@@ -8,46 +8,41 @@
  */
 class Solution {
 public:
-    int countNode(ListNode* a){
-        if(a==NULL)
-                return 0;
-        int cnt=0;
-        while(a!=NULL){
-            a=a->next;
-            cnt++;
-        }
+    int getSize(ListNode* head){
         
-        return cnt;
+        int sz=0;
+        while(head!=NULL)
+        {
+            sz++;
+            head=head->next;
+        }
+        return sz;
     }
     
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-        int l1=countNode(headA);
-        int l2=countNode(headB);
-        ListNode* ans=NULL;
-        if(l1<l2){
-            int len=l2-l1;
-            while(len>0){
-                headB=headB->next;
-                len--;
-            }
-        }
-        else if(l1>l2){
-              int len=l1-l2;
-            while(len>0){
-                headA=headA->next;
-                len--;
-            }
-        }
         
-        while(headA!=headB){
-            // if(headA==headB){
-            //     ans=headA;
-            //     return ans;
-            // }
-            headA=headA->next;
-            headB=headB->next;
+        int sz1=getSize(headA);
+        int sz2=getSize(headB);
+        
+        // cout<<sz1<<"  "<<sz2<<endl;
+        if(sz2>=sz1){
+            int diff=sz2-sz1;
+            while(diff--)
+                headB=headB->next;
         }
-        return headA;
-        // return ans;
+        else{
+            int sz=sz1-sz2;
+            while(sz--)
+                headA=headA->next;
+            
+        }
+        while(headA!=NULL and headB!=NULL){
+                if(headA==headB){
+                    return headA;
+                }
+                headA=headA->next;
+                headB=headB->next;
+            }
+            return NULL;
     }
 };
