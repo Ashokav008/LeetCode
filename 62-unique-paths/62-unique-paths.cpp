@@ -1,54 +1,40 @@
 class Solution {
 public:
+    
     int ans=0;
     
-    bool isPossible(int i,int j,vector<vector<int>>&vis){
+    void dfs(int i,int j, int n,int m , vector<vector<int>>&vis){
+           
+        if(i<0 or j<0 or i>=n or j>=m or vis[i][j]==1)
+                return;
         
-        if( i<0 or j<0 or  i>=vis.size() or j>=vis[0].size() or vis[i][j]==1 )
-            return false;
-        
-        return true;
-                
-    }
-    
-    void dfs(int i,int j , vector<vector<int>>&vis){
-        
-        vis[i][j]=1;
-        
-        if(i==vis.size()-1 and j==vis[0].size()-1){
-            cout<<i<<"  "<<j<<endl;
+            
+        if(i==n-1 and j==m-1){
             ans++;
-            vis[i][j]=0;
             return;
         }
+        // cout<<i<<" "<<j<<endl;
         
-        if(isPossible(i+1,j,vis)){
-            dfs(i+1,j,vis);
-        }
-        
-        if(isPossible(i,j+1,vis)){
-            dfs(i,j+1,vis);
-        }
+        vis[i][j]=1;
+        dfs(i+1,j,n,m,vis);
+        dfs(i,j+1,n,m,vis);
         vis[i][j]=0;
+        
     }
     
-    int uniquePaths(int m, int n) {
-     ans=0;
-      vector<vector<int>>vis(m+1,vector<int>(n+1,1)) ;
-        int mod=1e9+7;
-        // dfs(0,0,vis);
-        for(int i=1;i<m;i++){
-            
-            for(int j=1;j<n;j++){
+    int uniquePaths(int n, int m) {
+        ans=0;
+        vector<vector<int>>vis(n+1,vector<int>(m+1,1));
+        int i=0,j=0;
+     // dfs(i,j,n,m,vis);
+        
+        for(int i=1;i<n;i++){
+            for(int j=1;j<m;j++){
                 vis[i][j]=vis[i-1][j]+vis[i][j-1];
-                
-                
             }
-            
         }
+        return vis[n-1][m-1];
         
-        
-        return vis[m-1][n-1];
         
     }
 };
