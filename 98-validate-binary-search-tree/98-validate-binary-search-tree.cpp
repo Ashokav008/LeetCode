@@ -11,37 +11,25 @@
  */
 class Solution {
 public:
-//     int isBST(Node* root){
-//       if(!root)
-//                 return true;
-//         int rootData=root->val;
-//         int left=isValidBST(root->left);
-//         int right=isValidBST(root->right);
-        
-//         if(rootData>left and rootData<right)
-//                 return true;
-//         else
-//                 return false;
-//     }  
-     vector<int>ans;
-    void inOrder(TreeNode* root){
-        
-        if(!root)
-                return;
-        inOrder(root->left);
-        ans.push_back(root->val);
-        inOrder(root->right);
-        
-    }
+    
+   bool isBST(TreeNode* root, long long int maxi,long long int mini){
+       
+       if(!root)
+            return true;
+       if(root->val<=mini or root->val>=maxi)
+            return false;
+       
+       return isBST(root->left, root->val,mini) and isBST(root->right, maxi,root->val);
+   }
     
     bool isValidBST(TreeNode* root) {
-        ans.clear();
-        inOrder(root);
         
-        for(int i=1;i<ans.size();i++){
-            if(ans[i]<=ans[i-1])
-                    return false;
-        }
+        if(!root)
+                return true;
+        if(!root->left and !root->right)
         return true;
+        
+        return isBST(root, 1e18,-1e18);
+        
     }
 };
