@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<int> findOriginalArray(vector<int>& A) {
+    vector<int> findOriginalArray(vector<int>& arr) {
         
 
-        if (A.size() % 2) return {};
-        int N =A.size();
-        multiset<int> s(begin(A), end(A));
+        if (arr.size() % 2) return {};
+        int n =arr.size();
+        multiset<int> s(begin(arr), end(arr));
         vector<int> ans;
-        for (int i = 0; i < N; i += 2) {
+        for (int i = 0; i < n; i += 2) {
             int n = *s.begin();
             ans.push_back(n);
             s.erase(s.begin());
