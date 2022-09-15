@@ -8,11 +8,11 @@ public:
         multiset<int> s(begin(arr), end(arr));
         vector<int> ans;
         for (int i = 0; i < n; i += 2) {
-            int n = *s.begin();
-            ans.push_back(n);
+            int ele = *s.begin();
+            ans.push_back(ele);
             s.erase(s.begin());
-            if (s.find(2 * n) == s.end()) return {}; // Don't use `s.count(2 * n) == 0` here since it's an `O(N)` operation for `multiset`.
-            s.erase(s.find(2 * n));
+            if (s.find(2 * ele) == s.end()) return {}; // Don't use `s.count(2 * n) == 0` here since it's an `O(N)` operation for `multiset`.
+            s.erase(s.find(2 * ele));
         }
         return ans;
     }
