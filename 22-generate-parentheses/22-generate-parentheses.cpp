@@ -12,14 +12,18 @@ public:
                 ans.push_back(str);
             return;
         }
-        solve(open+1, close, n, str+'(');
+        solve(open+1, close, n, str+='(');
+        str.pop_back();
         
         if(open>close){
-            solve(open, close+1, n , str+')');
+            solve(open, close+1, n , str+=')');
+            str.pop_back();
         }
     }
     
     vector<string> generateParenthesis(int n) {
+        
+        
         solve(0,0,n,"");
         
         return ans;
