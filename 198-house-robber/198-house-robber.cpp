@@ -14,12 +14,34 @@ public:
         
     }
     
-    int rob(vector<int>& nums) {
+    int rob(vector<int>& arr) {
         int ans=0;
         
-        int n=nums.size();
-        vector<int>dp(n,-1);
-        return solve( n-1, nums, dp);
+        int n=arr.size();
+        vector<int>dp(n,0);
+        dp[0]=arr[0];
+        
+        if(n==1)
+                return arr[0];
+        if(n==2)
+                return max(arr[0], arr[1]);
+        
+        for(int i=1;i<n;i++){
+            
+            int l;
+            if(i-2<0)
+             l=arr[i];
+            else{
+                l=arr[i]+ dp[i-2];
+            }
+           int r=dp[i-1];
+            
+            dp[i]=max(l,r);
+            
+        }
+        
+        return max(dp[n-1], dp[n-2]);
+        // return solve( n-1, arr, dp);
         
         
     }
