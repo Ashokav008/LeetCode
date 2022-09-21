@@ -12,9 +12,6 @@ public:
                 ans.push_back(str);
             return;
         }
-        
-       
-        
         solve(open+1, close, n, str+'(');
         
         if(open>close){
