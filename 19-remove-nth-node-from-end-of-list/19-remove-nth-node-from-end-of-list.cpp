@@ -10,43 +10,47 @@
  */
 class Solution {
 public:
-    int findLength(ListNode* head){
-        
-        int ans=0;
-        ListNode* tmp=head;
+    int countTotalNodes(ListNode* head){
+        int cnt=0;
         while(head!=NULL){
-            head=head->next;
-            ans++;
+                head=head->next;
+            cnt++;
         }
-        
-        return ans;
+        return cnt;
     }
     
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        int len=findLength(head);
+        int total=countTotalNodes(head);
         
-        if(head->next==NULL){
-            return NULL;
-        }
-      cout<<len<<endl;
-        ListNode* tmp=head;
+        if(total==1 and n==1)
+                return NULL;
         
-        if(n==len){
+        int pos=total-n;
+        ListNode * curr=head;
+        if(pos==0){
+            
             return head->next;
-        }
-        int rN=len-n-1;
-        while(rN--){
-           tmp=tmp->next;
             
         }
-        cout<<tmp->val<<endl;
-        ListNode* curr=tmp;
-        ListNode* next=tmp->next->next;
-       
-        tmp->next=next;
         
-        return head;
+        while(pos--){
+           
+            if(pos==0){
+                
+                if(curr->next==NULL)
+                        curr= NULL;
+                else{
+                    
+                    curr->next=curr->next->next;
+                    
+                }
+                
+            }
+             curr=curr->next;
+                
+            }
         
+    return head;
         
     }
 };
