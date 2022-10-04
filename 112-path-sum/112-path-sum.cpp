@@ -16,8 +16,7 @@ public:
                 return false;
         if(root->left==NULL and root->right==NULL and tSum==root->val)
                 return true;
-         tSum=tSum-root->val;
+         tSum-=root->val;
          return hasPathSum(root->left,tSum) or hasPathSum(root->right,tSum);
-        
     }
 };
