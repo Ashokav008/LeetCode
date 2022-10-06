@@ -1,40 +1,40 @@
 #include<bits/stdc++.h>
 class TimeMap {
 public:
-   map<string, vector<pair<int, string>>> storage;
+   map<string, vector<pair<int, string>>> mp;
     TimeMap()
     {
-        storage.clear();
+        mp.clear();
     }
     void set(string key, string value, int timestamp)
     {
-        storage[key].push_back({timestamp, value});
+        mp[key].push_back({timestamp, value});
         // Storage is a hasmap storing timestamp and value as vector of pairs
         // against a timestamp
     }
     string get(string key, int timestamp)
     {
-        if (storage[key].size() == 0)
+        if (mp[key].size() == 0)
             return "";
         // If for that key no such pair is available then we cannot get
         // any value
-        int arr_len = storage[key].size();
+        int n = mp[key].size();
         // If there is vector of pairs then there will be size also
-        int l = 0;
-        int h = arr_len - 1;
+        int low = 0;
+        int high = n - 1;
         int mid = -1;
         // We are using binary search to find the value pair <= timestamp
-        while (l <= h)
+        while (low <= high)
         {
-            mid = (l + h) / 2;
-            if (storage[key][mid].first <= timestamp)
-                l = mid + 1;
+            mid = (low + high) / 2;
+            if (mp[key][mid].first <= timestamp)
+                low = mid + 1;
             else
-                h = mid - 1;
+                high = mid - 1;
         }
-        if (l == 0)
+        if (low == 0)
             return "";
-        return storage[key][l - 1].second;
+        return mp[key][low - 1].second;
     }
 };
 
