@@ -3,7 +3,7 @@ public:
     int climbStairs(int n) {
         if(n==1)
                 return 1;
-        vector<int>dp(n,0);
+        // vector<int>dp(n,0);
         // dp[0]=1;
         int f=1;
         int s=2;
