@@ -1,3 +1,4 @@
+[Discussion Post (created on 28/9/2022 at 13:15)](https://leetcode.com/problems/group-anagrams/discuss/2751613/Easy-solution-using-Hashmap-oror-Solution-With-Comments-oror-Accepetd)  
 <h2>  Group Anagrams</h2><hr><div><p>Given an array of strings <code>strs</code>, group <strong>the anagrams</strong> together. You can return the answer in <strong>any order</strong>.</p>
 
 <p>An <strong>Anagram</strong> is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</p>
