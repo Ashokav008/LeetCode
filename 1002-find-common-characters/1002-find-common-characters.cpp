@@ -3,12 +3,12 @@ public:
     vector<string> commonChars(vector<string>& words) {
         vector<string>ans;
         int n=words.size();
-        vector<int>track(26,0),ff(26,0); 
+        vector<int>track(26,0),ff(26,INT_MAX); 
         
-        for(auto it:words[0])
-                ff[it-'a']++;
+        // for(auto it:words[0])
+        //         ff[it-'a']++;
         
-        for(int i=1;i<n;i++){
+        for(int i=0;i<n;i++){
             
             for(auto it: words[i]){
                 track[it-'a']++;
@@ -27,7 +27,7 @@ public:
             while(cnt--){
                 char ch=i+'a';
                 string str;
-                str=ch;
+                str+=ch;
                 ans.push_back(str);
             }
         }
