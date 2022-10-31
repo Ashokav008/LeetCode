@@ -16,23 +16,18 @@ public:
     
             j++;
         }
-        cout<<endl<<endl;
         i=0,j=m-1;
         while(i<n-1){
             int i1=i-1,j1=j-1;
             int ele=mat[i][j];
-            // cout<<ele<<endl;
             while(i1>=0 and j1>=0){
-                
                 if(mat[i1][j1]!=ele)
                         return false;
                 i1--;
                 j1--;
             }
             i++;
-            
         }
-        
         return true;
     }
 };
