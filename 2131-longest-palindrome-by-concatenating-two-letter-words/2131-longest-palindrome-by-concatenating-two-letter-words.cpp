@@ -7,7 +7,6 @@ public:
                 mp[it]++;
         int maxi=0,ans=0;
         bool flg=false;
-        
         for(auto it:mp){
             string str=it.first;
             string rstr=str;
@@ -15,10 +14,11 @@ public:
             if(str!=rstr and mp.find(str)!=mp.end() )
                     ans+=(2*min(mp[str],mp[rstr]));
             
-            if(rstr==str  and mp[str]%2==0){
-                ans+=2* mp[str];
+            if(rstr==str ){
+                    if(mp[str]%2==0)
+                            ans+=2* mp[str];
             }
-            else if(rstr==str and mp[str]%2==1)
+             if(rstr==str and mp[str]%2==1)
             {
                 flg=true;
                 ans+=2*(mp[str]-1);
