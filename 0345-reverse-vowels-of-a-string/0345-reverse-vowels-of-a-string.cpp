@@ -6,15 +6,11 @@ public:
         unordered_map<char,int>mp{{'a',1},{'e',1},{'i',1},{'o',1},{'u',1},{'A',1},{'E',1},{'I',1},{'O',1},{'U',1}};
         while(i<j){
             
-            while(i<j and mp.find(s[i])==mp.end()){
+            while(i<j and mp.find(s[i])==mp.end())
                         i++;
-                cout<<"First"<<endl;
-            }
             
-            while(i<j and mp.find(s[j])==mp.end()){
+            while(i<j and mp.find(s[j])==mp.end())
                         j--;
-                cout<<"second"<<endl;
-            }
             
             if(i<j)
             {
