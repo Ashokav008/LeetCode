@@ -31,7 +31,9 @@ public:
         if(sum%2==1)
                 return false;
          sum/=2;
-        vector<vector<bool>>dp(n+1, vector<bool>(sum+1,-1));
+        vector<vector<int>>dp(n+1, vector<int>(sum+1,-1));
+        
+        return solve(n-1,sum , nums,dp);
         
         for(int i=0;i<=n;i++){
             dp[i][0]=1;
