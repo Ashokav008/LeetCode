@@ -32,8 +32,31 @@ public:
         if(sum%2==1)
                 return false;
          sum/=2;
-        vector<vector<int>>dp(n+1, vector<int>(sum+1,-1));
-        return solve(n-1, sum , nums, dp);
+        vector<vector<bool>>dp(n+1, vector<bool>(sum+1,-1));
+        
+        for(int i=0;i<=n;i++){
+            dp[i][0]=1;
+        }
+        for(int i=1;i<=sum;i++){
+            dp[0][i]=0;
+        }
+        
+        
+        for(int i=1;i<=n;i++){
+            
+            for(int j=1;j<=sum;j++){
+                bool  include=false, notInclude=false;
+               if(nums[i-1]<=j)
+                   include=dp[i-1][j-nums[i-1]] or dp[i-1][j]; 
+                
+             else
+                notInclude=dp[i-1] [j];
+                
+            dp[i][j]= include or notInclude;
+            }
+        }
+        
+        return dp[n][sum];
         
     }
 };
