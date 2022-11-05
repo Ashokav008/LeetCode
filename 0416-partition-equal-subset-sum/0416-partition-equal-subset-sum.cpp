@@ -14,10 +14,9 @@ public:
       bool  include=false, notInclude=false;
         
         if(nums[i]<=sum)
-                include=solve(i-1, sum-nums[i],nums, dp ) or solve(i-1, sum,nums,dp);
-        else{
+                include=solve(i-1, sum-nums[i],nums, dp );
+       
             notInclude=solve(i-1, sum , nums, dp)  ;
-        }
         
         
         return  dp[i][sum]= include or notInclude;
