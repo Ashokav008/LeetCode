@@ -14,7 +14,7 @@ public:
             
                 s+=s[0];
                 s.erase(0,1);
-                cout<<s<<endl;
+                // cout<<s<<endl;
                 ans=min(ans,s);
             }
         }
