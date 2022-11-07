@@ -1,47 +1,56 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 //Initial template for C++
 
 #include<bits/stdc++.h>
 using namespace std;
 
- // } Driver Code Ends
+// } Driver Code Ends
 //User function template for C++
 
 class Solution {
   public:
-  //  *This is Floyed Warshell Algorithmmmmm *//
-  
-	void shortest_distance(vector<vector<int>>&g){
-	    // Code here
-	    int n=g.size();
-	    for(int i=0;i<n;i++){
-	        for(int j=0;j<n;j++){
-	            if(g[i][j]==-1)
-	                g[i][j]=INT_MAX;
-	           
-	        }
-	    }
-	    
-	    for(int k=0;k<n;k++){
-	        for(int i=0;i<n;i++){
-	            for(int j=0;j<n;j++){
-	                
-	                if(i==k or j==k or g[i][k]==INT_MAX or g[k][j]==INT_MAX)
-	                    continue;
-	                g[i][j]=min(g[i][j] , g[i][k]+g[k][j]);
-	            }
-	        }
-	    }
-	    for(int i=0;i<n;i++){
-	        for(int j=0;j<n;j++)
-	            if(g[i][j]==INT_MAX)
-	                g[i][j]=-1;
-	    }
-	    
+	void shortest_distance(vector<vector<int>>&mat){
+	   int n=mat.size(),m=mat[0].size();
+	   for(int i=0;i<n;i++){
+	       
+	       for(int j=0;j<m;j++){
+	           if(mat[i][j]==-1)
+	                mat[i][j]=1e9;
+	       }
+	       mat[i][i]=0;
+	   }
+	   
+	   
+	   for(int via=0;via<n;via++){
+	       
+	       for(int i=0;i<n;i++)
+	       {
+	           for(int j=0;j<m;j++){
+	               
+	               mat[i][j]=min(mat[i][j], mat[i][via]+ mat[via][j]);
+	               
+	           }
+	       }
+	       
+	   }
+	   
+	   
+	   
+	   
+	   
+	   for(int i=0;i<n;i++){
+	       
+	       for(int j=0;j<m;j++){
+	           if(mat[i][j]==1e9)
+	                mat[i][j]=-1;
+	       }
+	   }
+	   
+	   return;
 	}
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 int main(){
 	int tc;
 	cin >> tc;
@@ -64,4 +73,5 @@ int main(){
 		}
 	}
 	return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
