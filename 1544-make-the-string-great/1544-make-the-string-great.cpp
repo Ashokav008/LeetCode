@@ -1,36 +1,31 @@
 class Solution {
 public:
-    bool solve(string &s){
-        
-        
-        
-        
-       bool flg=true;
-        for(int i=0;i<s.size()-1;i++){
-                if((s[i]-'a' == s[i+1]-'A') or ( s[i]-'A'==s[i+1]-'a')){
-                        flg=false;
-                        s.erase(i,2);
-                        i-=2;
-                    
-                }
-            
-        }
-        return flg;
-        
-    }
     
     string makeGood(string s) {
         
+       stack<char>stk;
         
-        while(1){
-            if(s.size()<2)
-                    break;
+        string ans;    //leEeetcode
+        
+        for(int i=0;i<s.size();i++){
             
-            if(solve(s))
-                    break;
+          bool flg=true;
+            if(!stk.empty() and ((stk.top()-'a'==s[i]-'A') or (stk.top()-'A'== s[i]-'a'))){
+                stk.pop();
+                  cout<<" removing "<<s[i]<<endl;
+                if(ans.size())
+                    ans.pop_back();
+                flg=false;
+                
+            }
+            
+           if(flg){
+               cout<<" adding "<<s[i]<<endl;
+                ans+=s[i];
+                stk.push(s[i]);
+            }
+            
         }
-        
-        return s;
-        
+        return ans;
     }
 };
