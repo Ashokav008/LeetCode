@@ -20,6 +20,8 @@ public:
     }
     
     string makeGood(string s) {
+        
+        
         while(1){
             if(s.size()<2)
                     break;
