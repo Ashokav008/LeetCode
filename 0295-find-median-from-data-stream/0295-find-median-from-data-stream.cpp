@@ -16,7 +16,6 @@ public:
         multiset<int>:: iterator it=st.begin();
         double med=0;
         if(n%2==0){
-            cout<<"even "<<n<<endl;
             int j=n/2-1;
             while(j--)
                     it++;
@@ -27,7 +26,6 @@ public:
             return med/2;
             
         }else{
-            cout<<"odd "<<n<<endl;
             int j=n/2;
            while(j--)
                 it++;
