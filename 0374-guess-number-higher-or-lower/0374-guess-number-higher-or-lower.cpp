@@ -14,8 +14,7 @@ public:
         if(guess(n)==0)
                 return n;
         
-            while(s<e){
-                
+            while(s<=e){
                 int mid=(s)+(e-s)/2;
                 if(guess(mid)==0)
                         return mid;
@@ -24,11 +23,8 @@ public:
                 }
                 else
                     s=mid;
-                        
                 
             }
-        
         return n;
-        
     }
 };
