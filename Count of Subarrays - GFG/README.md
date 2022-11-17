@@ -1,7 +1,6 @@
 # Count of Subarrays
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given an array of <strong>N</strong> positive integers&nbsp; <strong>Arr<sub>1</sub>, Arr<sub>2</sub> ............ Arr<sub>n</sub></strong>. The value of each contiguous subarray of given array is the <strong>maximum element present in that subarray</strong>. The task is to return the number of subarrays having value strictly greater than <strong>K</strong>.</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an array of <strong>N</strong> positive integers&nbsp; <strong>Arr<sub>1</sub>, Arr<sub>2</sub> ............ Arr<sub>n</sub></strong>. The value of each contiguous subarray of given array is the <strong>maximum element present in that subarray</strong>. The task is to return the number of subarrays having value strictly greater than <strong>K</strong>.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -34,5 +33,4 @@ Complete the function <strong>countSubarray()</strong>&nbsp;which takes an array
 <strong>Constraints:</strong><br>
 1 &lt;= N &lt;= 10<sup>5</sup><br>
 1 &lt;= Arr[i] &lt;= 10<sup>5</sup></span></p>
- <p></p>
-            </div>
+</div>
