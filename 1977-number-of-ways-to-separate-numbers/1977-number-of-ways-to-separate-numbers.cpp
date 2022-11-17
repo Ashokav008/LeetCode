@@ -40,6 +40,15 @@ public:
     int numberOfCombinations(string nums) {
         int n=nums.size();
         int ans=0;
+        
+        long long a=0;
+//         for(int i=0;i<n;i++){
+//             for(int j=0;j<n;j++){
+//                 for(int k=0;k<n;k++)
+//                         a++;
+//             }
+//         }
+        
         int dp[n][n+1];
         memset(dp,0,sizeof(dp));
         string prev="";
