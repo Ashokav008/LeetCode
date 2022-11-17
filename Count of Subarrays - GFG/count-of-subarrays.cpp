@@ -15,21 +15,18 @@ public:
 	ll countSubarray(int arr[], int n, int k) {
 	    // code here
 	    ll total= (ll)n*(n+1)/2;
-	    
 	    ll sa=0;
 	    for(int i=0;i<n;i++){
 	        if(arr[i]>k){
 	            continue;
 	        }
-	      ll  cnt=0;
+	       ll  cnt=0;
 	       while(i<n and arr[i]<=k)
 	        {
 	            i++;
 	            cnt++;
 	        }
 	        sa+=cnt*(cnt+1)/2;
-	       
-	        
 	    }
 	    return total-sa;
 	    
