@@ -25,32 +25,43 @@ struct Node
 
 class Solution {
   public:
-    vector<int> maximumValue(Node* node) {
-        //code here
-        queue<Node*>q;
-        q.push(node);
-        
-        vector<int>ans;
-        
-        while(!q.empty()){
-            int sz=q.size();
-            int maxi=INT_MIN;
-            while(sz--){
-                Node* front=q.front();
-                q.pop();
-                maxi=max(maxi, front->data);
-                
-                if(front->left){
-                    q.push(front->left);
-                }
-                if(front->right){
-                    q.push(front->right);
-                }
-            }
-            ans.push_back(maxi);
-            
-        }
-     return ans;   
+  
+  int getHeight(Node* root){
+      if(!root)
+        return 0;
+    if(root->left==NULL  and root->right==NULL){
+        return 1;
+    }
+    int l=getHeight(root->left);
+    int r=getHeight(root->right);
+    
+    return 1+ max(l,r);
+  }
+  
+  void dfs(int h, Node* root, vector<int>& ans){
+      
+      if(!root){
+          return ;
+      }
+      ans[h]=max(ans[h] , root->data);
+      
+      if(root->left){
+          dfs(1+h, root->left, ans);
+      }
+      if(root->right){
+          dfs(1+h , root->right, ans);
+      }
+      
+      return;
+      
+  }
+  
+vector<int> maximumValue(Node* node) {
+       int h=getHeight(node);
+       vector<int>ans(h,INT_MIN);
+    //   cout<<h<<endl;
+      dfs(0, node, ans);
+       return ans;
     }
 };
 
