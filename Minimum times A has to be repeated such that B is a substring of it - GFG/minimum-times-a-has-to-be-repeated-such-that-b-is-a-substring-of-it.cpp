@@ -1,54 +1,42 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 //User function Template for C++
 
 class Solution {
   public:
     int minRepeats(string a, string b) {
         // code here
-        
         int n=a.size(),m=b.size();
-        unordered_set<char>st;
-        
-        for(int i=0;i<a.size();i++){
-           
-            st.insert(a[i]);
+        string str=a;
+        int rep=m/n;
+        int i=1;
+        while(i<rep){
+            str+=a;
+            i++;
+        }
+        // cout<<str<<endl;
+        if(str.find(b)!=string::npos){
+            return rep;
         }
         
-        for(int i=0;i<b.size();i++){
-            // cout<<b[i]<<endl;
-            if(st.find(b[i])==st.end())
-                return -1;
+        // if(str.find(b)!=string::npos){
+        //     return 3;
+        // }
+        str+=a;
+        if(str.find(b)!=string::npos){
+            return rep+1;
         }
-       int add=m/n;
-       if(m%n==0)
-            add--;
-       string str=a;
-       for(int i=0;i<add;i++){
-           str+=a;
-       }
         
-    // cout<<add<<" " <<str<<"  "<<b<<endl;
-     int sz=str.find(b);
-    if(sz!=string::npos)
-    return add+1;
-    str+=a;
-    
-       sz=str.find(b);
-    if(sz!=string::npos)
-        return add+2;
-    
-        
-    return -1;    
+        return -1;
         
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main() {
     int t;
@@ -62,4 +50,5 @@ int main() {
         cout << ob.minRepeats(A,B) << endl;
     }
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
