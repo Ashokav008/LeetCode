@@ -34,14 +34,34 @@ public:
     
 
     long long int distinctColoring(int n, int r[], int g[], int b[]){
-        vector<vector<long long int>>dp(n+1,vector<long long int>(3,-1));
+        vector<vector<long long int>>dp(n+1,vector<long long int>(3,0));
         // memset(dp,-1,sizeof(dp));
-         long long int  f=0,s=0,t=0;
-        f=solve(0,n,0,r,g,b,dp);
-        s=solve(0,n,1,r,g,b,dp);
-        t=solve(0,n,2,r,g,b,dp);
-        // cout<<f<<s<<t<<endl;
-        return min(f,min(s,t));
+        //  long long int  f=0,s=0,t=0;
+        // f=solve(0,n,0,r,g,b,dp);
+        // s=solve(0,n,1,r,g,b,dp);
+        // t=solve(0,n,2,r,g,b,dp);
+        
+        for(int i=n-1;i>=0;i--){
+            for(int pColor=0;pColor<=2;pColor++){
+                    long long int f=0; 
+                    if(pColor==0){
+                        f=r[i] + min( dp[i+1][1], dp[i+1][2] );
+                        
+                    }else if(pColor==1){
+                         f=g[i] +min( dp[i+1][0], dp[i+1][2] ); ;
+                    }
+                    else if(pColor==2){
+                         f=b[i] + min( dp[i+1][0], dp[i+1][1] );;
+                        
+                    }
+                    // cout<<f<<s<<t<<endl;
+                     dp[i][pColor]= f;
+            }
+        }
+                    
+                    // cout<<f<<s<<t<<endl;
+                    return min(dp[0][0] , min(dp[0][1],dp[0][2]));
+                    // return min(f,min(s,t));
     }
 };
 
