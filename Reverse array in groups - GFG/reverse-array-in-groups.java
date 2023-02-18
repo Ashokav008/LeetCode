@@ -49,7 +49,6 @@ class Solution {
            s++;
            e--;
         }
-        
         return;
     }
     
@@ -61,8 +60,8 @@ class Solution {
             reverse(i,e, arr);
             
             i=i+k;
-            if(e==n-1)  
-                break;
+            // if(e==n-1)  
+            //     break;
             
         }
         return;
