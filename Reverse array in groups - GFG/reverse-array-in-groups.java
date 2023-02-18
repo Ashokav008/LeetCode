@@ -45,11 +45,9 @@ class Solution {
     
     void reverse(int s, int e,ArrayList<Integer> arr){
         while(s<=e){
-            int tmp=arr.get(s);
-            arr.set(s,arr.get(e));
-            arr.set(e, tmp);
-            s++;
-            e--;
+           Collections.swap(arr, s, e);
+           s++;
+           e--;
         }
         
         return;
