@@ -10,7 +10,7 @@ class Solution{
         sort(a,a+n);
         sort(b,b+n);
          long long int ans=0;
-        reverse(a,a+n);
+        reverse(b,b+n);
         
         for(int i=0;i<n;i++){
             ans+=(a[i]*b[i]);
