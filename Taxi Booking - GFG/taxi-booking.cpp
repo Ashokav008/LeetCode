@@ -13,9 +13,10 @@ public:
     int minimumTime(int n,int cur,vector<int> &pos,vector<int> &time){
         
         int mini=INT_MAX;
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++)
             mini=min(mini, abs(pos[i]-cur)*time[i]);
-        }
+        
+        
         return mini;
         
     }
