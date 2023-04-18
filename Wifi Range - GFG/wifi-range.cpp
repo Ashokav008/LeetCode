@@ -26,11 +26,9 @@ class Solution{
                 cnt++;
                 i++;
             }
-            if(i==n and cnt>x/2){
+            if((i==n and cnt>x/2) or cnt>x )
                 return false;
-            }
-            if(cnt>x)
-                return false;
+            
             cnt=0;
             i++;
         }
