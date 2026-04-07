@@ -91,6 +91,7 @@ class Robot {
     }
     
     public String getDir() {
+           
         return dir;
     }
 }
