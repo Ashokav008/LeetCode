@@ -23,5 +23,10 @@
 ## Simulation
 |  |
 | ------- |
+| [2069-walking-robot-simulation-ii](https://github.com/Ashokav008/LeetCode/tree/master/2069-walking-robot-simulation-ii) |
 | [2075-decode-the-slanted-ciphertext](https://github.com/Ashokav008/LeetCode/tree/master/2075-decode-the-slanted-ciphertext) |
+## Design
+|  |
+| ------- |
+| [2069-walking-robot-simulation-ii](https://github.com/Ashokav008/LeetCode/tree/master/2069-walking-robot-simulation-ii) |
 <!---LeetCode Topics End-->
