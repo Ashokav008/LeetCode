@@ -7,11 +7,13 @@
 |  |
 | ------- |
 | [0041-first-missing-positive](https://github.com/Ashokav008/LeetCode/tree/master/0041-first-missing-positive) |
+| [3488-closest-equal-element-queries](https://github.com/Ashokav008/LeetCode/tree/master/3488-closest-equal-element-queries) |
 | [3653-xor-after-range-multiplication-queries-i](https://github.com/Ashokav008/LeetCode/tree/master/3653-xor-after-range-multiplication-queries-i) |
 ## Hash Table
 |  |
 | ------- |
 | [0041-first-missing-positive](https://github.com/Ashokav008/LeetCode/tree/master/0041-first-missing-positive) |
+| [3488-closest-equal-element-queries](https://github.com/Ashokav008/LeetCode/tree/master/3488-closest-equal-element-queries) |
 ## String
 |  |
 | ------- |
@@ -35,4 +37,8 @@
 |  |
 | ------- |
 | [3653-xor-after-range-multiplication-queries-i](https://github.com/Ashokav008/LeetCode/tree/master/3653-xor-after-range-multiplication-queries-i) |
+## Binary Search
+|  |
+| ------- |
+| [3488-closest-equal-element-queries](https://github.com/Ashokav008/LeetCode/tree/master/3488-closest-equal-element-queries) |
 <!---LeetCode Topics End-->
