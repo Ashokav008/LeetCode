@@ -18,6 +18,7 @@
 ## String
 |  |
 | ------- |
+| [0006-zigzag-conversion](https://github.com/Ashokav008/LeetCode/tree/master/0006-zigzag-conversion) |
 | [0712-minimum-ascii-delete-sum-for-two-strings](https://github.com/Ashokav008/LeetCode/tree/master/0712-minimum-ascii-delete-sum-for-two-strings) |
 | [2075-decode-the-slanted-ciphertext](https://github.com/Ashokav008/LeetCode/tree/master/2075-decode-the-slanted-ciphertext) |
 ## Dynamic Programming
