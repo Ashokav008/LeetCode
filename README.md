@@ -47,4 +47,8 @@
 |  |
 | ------- |
 | [1855-maximum-distance-between-a-pair-of-values](https://github.com/Ashokav008/LeetCode/tree/master/1855-maximum-distance-between-a-pair-of-values) |
+## Math
+|  |
+| ------- |
+| [3783-mirror-distance-of-an-integer](https://github.com/Ashokav008/LeetCode/tree/master/3783-mirror-distance-of-an-integer) |
 <!---LeetCode Topics End-->
