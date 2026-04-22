@@ -7,6 +7,7 @@
 |  |
 | ------- |
 | [0041-first-missing-positive](https://github.com/Ashokav008/LeetCode/tree/master/0041-first-missing-positive) |
+| [1722-minimize-hamming-distance-after-swap-operations](https://github.com/Ashokav008/LeetCode/tree/master/1722-minimize-hamming-distance-after-swap-operations) |
 | [1848-minimum-distance-to-the-target-element](https://github.com/Ashokav008/LeetCode/tree/master/1848-minimum-distance-to-the-target-element) |
 | [1855-maximum-distance-between-a-pair-of-values](https://github.com/Ashokav008/LeetCode/tree/master/1855-maximum-distance-between-a-pair-of-values) |
 | [2078-two-furthest-houses-with-different-colors](https://github.com/Ashokav008/LeetCode/tree/master/2078-two-furthest-houses-with-different-colors) |
@@ -64,4 +65,12 @@
 |  |
 | ------- |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/Ashokav008/LeetCode/tree/master/2452-words-within-two-edits-of-dictionary) |
+## Depth-First Search
+|  |
+| ------- |
+| [1722-minimize-hamming-distance-after-swap-operations](https://github.com/Ashokav008/LeetCode/tree/master/1722-minimize-hamming-distance-after-swap-operations) |
+## Union-Find
+|  |
+| ------- |
+| [1722-minimize-hamming-distance-after-swap-operations](https://github.com/Ashokav008/LeetCode/tree/master/1722-minimize-hamming-distance-after-swap-operations) |
 <!---LeetCode Topics End-->
