@@ -7,6 +7,7 @@
 |  |
 | ------- |
 | [0041-first-missing-positive](https://github.com/Ashokav008/LeetCode/tree/master/0041-first-missing-positive) |
+| [0064-minimum-path-sum](https://github.com/Ashokav008/LeetCode/tree/master/0064-minimum-path-sum) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Ashokav008/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [1722-minimize-hamming-distance-after-swap-operations](https://github.com/Ashokav008/LeetCode/tree/master/1722-minimize-hamming-distance-after-swap-operations) |
 | [1848-minimum-distance-to-the-target-element](https://github.com/Ashokav008/LeetCode/tree/master/1848-minimum-distance-to-the-target-element) |
@@ -30,6 +31,7 @@
 ## Dynamic Programming
 |  |
 | ------- |
+| [0064-minimum-path-sum](https://github.com/Ashokav008/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0712-minimum-ascii-delete-sum-for-two-strings](https://github.com/Ashokav008/LeetCode/tree/master/0712-minimum-ascii-delete-sum-for-two-strings) |
 ## Simulation
 |  |
@@ -83,5 +85,6 @@
 ## Matrix
 |  |
 | ------- |
+| [0064-minimum-path-sum](https://github.com/Ashokav008/LeetCode/tree/master/0064-minimum-path-sum) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Ashokav008/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 <!---LeetCode Topics End-->
